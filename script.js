@@ -101,7 +101,15 @@ function renderizarTarefas() {
     });
 }
 
-function alterarStatus
+function alterarStatus (id) {
+    tarefa.forEach(function (tarefa) {
+        if (tarefa.id === id) {
+            tarefa.concluido = !tarefa.concluido;
+        }
+    });
+    salvarTarefa();
+    renderizarTarefas();
+}
 
 
 renderizarTarefas();
