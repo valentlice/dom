@@ -81,6 +81,11 @@ function renderizarTarefas() {
             "btn-sm",
             "me-2"
         );
+        botaoConcluir.addEventListener(
+            "click", function () {
+                alterarStatus(tarefa.id);
+            }
+        );
 
         const botaoExcluir = document.createElement("button");
         const botaoEditar = document.createElement("button");
@@ -95,5 +100,8 @@ function renderizarTarefas() {
         listaTarefas.appendChild(linha);
     });
 }
+
+function alterarStatus
+
 
 renderizarTarefas();
