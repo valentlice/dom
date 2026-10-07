@@ -102,7 +102,7 @@ function renderizarTarefas() {
 }
 
 function alterarStatus (id) {
-    tarefa.forEach(function (tarefa) {
+    tarefas.forEach(function (tarefa) {
         if (tarefa.id === id) {
             tarefa.concluido = !tarefa.concluido;
         }
