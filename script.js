@@ -70,10 +70,27 @@ function renderizarTarefas() {
             '<span class="badge text-bg-warning">Pendente</span>';
         }
 
+        const colunaAcoes = document.createElement("td");
+        colunaAcoes.classList.add("text-center");
+
+        const botaoConcluir = document.createElement("button");
+        botaoConcluir.textContent = tarefa.concluido ? "Reabrir" : "Concluir";
+        botaoConcluir.classList.add(
+            "btn",
+            tarefa.concluido ? "btn-warning" : "btn-success",
+            "btn-sm",
+            "me-2"
+        );
+
+        const botaoExcluir = document.createElement("button");
+        const botaoEditar = document.createElement("button");
+
+        colunaAcoes.appendChild(botaoConcluir);
 
         linha.appendChild(colunaNumero);
         linha.appendChild(colunaTexto);
         linha.appendChild(colunaStatus);
+        linha.appendChild(colunaAcoes);
 
         listaTarefas.appendChild(linha);
     });
