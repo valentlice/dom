@@ -11,7 +11,7 @@ let tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
 form.addEventListener("submit", adicionarTarefa);
 
 // Funções
-function adicionarTarefa() {
+function adicionarTarefa(event) {
     event.preventDefault();
 
     let texto = inputTarefa.value.trim();
@@ -78,3 +78,5 @@ function renderizarTarefas() {
         listaTarefas.appendChild(linha);
     });
 }
+
+renderizarTarefas();
