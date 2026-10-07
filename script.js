@@ -127,6 +127,8 @@ function renderizarTarefas() {
 
         listaTarefas.appendChild(linha);
     });
+
+    atualizarContador();
 }
 
 function alterarStatus (id) {
@@ -176,6 +178,15 @@ function excluirTarefa(id) {
   });
   salvarTarefa();
   renderizarTarefas();
+}
+
+function atualizarContador(){
+    const quantidade = tarefas.length;
+    if (quantidade == 1) {
+        contador.textContent = "1 tarefa";
+    } else {
+        contador.textContent = quantidade + " tarefas";
+    }
 }
 
 renderizarTarefas();
